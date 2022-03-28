@@ -1,0 +1,24 @@
+package com.springBoot;
+
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import com.springBoot.Util.SumValueDAOImpl;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+class SpringBootFirstProjectApplicationTests {
+
+	@Autowired
+	private SumValueDAOImpl dao;
+	
+	@Test
+	public void contextLoads() {
+		SumValueDAOImpl valueDao = new SumValueDAOImpl();
+		valueDao.setValueOne(1);
+	}
+
+}
